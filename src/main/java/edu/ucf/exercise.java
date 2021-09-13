@@ -36,6 +36,6 @@ public class exercise {
 
         // calculate retirement year
         int retirementYear = currentYear + yearsleft;
-        System.out.print( "It's " + currentYear + " so you can retire in " + retirementYear + ".");
+        System.out.print("It's " + currentYear + " so you can retire in " + retirementYear + ".");
     }
 }
