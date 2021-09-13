@@ -6,31 +6,36 @@
 package edu.ucf;
 
 import java.util.Scanner;
+import java.util.Calendar;
 
 public class exercise {
     public static void main(String[] args) {
-        // prompt for first number
-        System.out.print("What is the first number? ");
+        // prompt for age
+        System.out.print("What is your current age? ");
 
         // create new scanner
         Scanner input = new Scanner(System.in);
 
-        // read first number
-        int firstNumber = Integer.parseInt(input.nextLine());
+        // read age
+        int age = Integer.parseInt(input.nextLine());
 
-        // prompt for second number
-        System.out.print("What is the second number? ");
+        // prompt for retirement age
+        System.out.print("At what age would you like to retire? ");
 
-        // read second number
-        int secondNumber = Integer.parseInt(input.nextLine());
+        // read retirement age
+        int retirementAge = Integer.parseInt(input.nextLine());
 
-        // calculate simple math
-        int sum = firstNumber + secondNumber;
-        int difference = firstNumber - secondNumber;
-        int multiplied = firstNumber * secondNumber;
-        int divided = firstNumber / secondNumber;
+        // calculate years left
+        int yearsleft = retirementAge - age;
 
-        // output results
-        System.out.print(firstNumber + " + " + secondNumber +" = " + sum + "\n" + firstNumber + " - " + secondNumber + " = " + difference + "\n" + firstNumber + " * " + secondNumber + " = " + multiplied + "\n" + firstNumber + " / " + secondNumber + " = " + divided);
+        // output years left
+        System.out.print("You have " + yearsleft + " years left until you can retire." + "\n");
+
+        // get current year
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+
+        // calculate retirement year
+        int retirementYear = currentYear + yearsleft;
+        System.out.print( "It's " + currentYear + " so you can retire in " + retirementYear + ".");
     }
 }
